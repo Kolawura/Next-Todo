@@ -21,7 +21,7 @@ const Theme = () => {
 
 
     return (
-        <div className='flex justify-between'>
+        <div className='flex justify-between w-full mb-4'>
             <h1 className='text-white text-3xl font-semibold'>TODO</h1>
             <button onClick={toggleTheme}>
                 {theme === 'light' ?

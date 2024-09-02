@@ -7,3 +7,18 @@
 body{
   font-family: "Josefin Sans", sans-serif;
 }
+.checkBox{
+  border:2px solid hsl(280, 87%, 65%);
+}
+.checkBox:checked {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.checkBox:checked::before{
+  content: '✔';
+  color: #fff;
+  font-size: 14px;
+}
