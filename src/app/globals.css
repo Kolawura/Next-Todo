@@ -7,11 +7,12 @@
 body{
   font-family: "Josefin Sans", sans-serif;
 }
-.checkBox{
+.checkBox:hover{
   border:2px solid hsl(280, 87%, 65%);
 }
 .checkBox:checked {
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;

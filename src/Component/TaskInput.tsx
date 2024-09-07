@@ -14,9 +14,9 @@ export const TaskInput = ({addTask}:TaskInputProps) => {
   }
 
   return (
-    <form className="relative flex items-center w-full mt-4 mb-4" onSubmit={handleSubmit}>
-      <input className="checkBox w-6 h-6 absolute translate-x-1/2 rounded-full appearance-none" type="checkbox"  />
-      <input className='w-full rounded-lg pl-16 p-4 border-none bg-white dark:bg-gray-800 text-lg text-gray-500 dark:text-gray-300 focus:outline-none' type="text" value={text} onChange={(e)=>setText(e.target.value)} placeholder='Create a new todo...' />
+    <form className="relative flex items-center w-full h-fit mb-4" onSubmit={handleSubmit}>
+      <input className="border-2 dark:border-gray-600 border-gray-300 w-6 h-6 absolute translate-x-1/2 rounded-full appearance-none" type="checkbox"  />
+      <input className='w-full rounded-lg pl-16 p-4 border-none bg-white dark:bg-gray-800 text-lg text-gray-500 focus:text-gray-600 dark:text-gray-300 focus:outline-none' type="text" value={text} onChange={(e)=>setText(e.target.value)} placeholder='Create a new todo...' />
     </form>
   )
 }

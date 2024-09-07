@@ -8,6 +8,7 @@ export interface TasksProps {
   tasks: Task[];
   toggleComplete: (id: number) => void;
   deleteTask: (id: number) => void;
+  deleteComTask: () => void;
 }
 
 export interface TaskProps {

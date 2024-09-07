@@ -39,19 +39,24 @@ export default function Home() {
     localStorage.setItem('tasks', JSON.stringify(newTasks))
     setTasks(newTasks);
   };
+  const deleteComTask = () => {
+    const newTasks = tasks.filter((todo) => todo.complete === false)
+    localStorage.setItem('tasks', JSON.stringify(newTasks))
+    setTasks(newTasks);
+  };
 
   return (
-    <main className="absolute bg-lightBg dark:bg-darkBg w-full">
-      <div className=" w-full h-full">
+    <main className="bg-lightBg dark:bg-darkBg w-full h-screen">
+      
         <Image />
-        <div className="relative top-10 flex justify-center">
-          <div className="flex flex-col items-center h-screen md:w-1/3 w-4/5">
+        <div className="absolute top-14 md:top-20 m-auto w-full flex justify-center">
+          <div className="flex flex-col items-center md:w-1/3 w-5/6">
             <Theme />
             <TaskInput addTask={addTask} />
-            <Tasks tasks={tasks} toggleComplete={toggleComplete} deleteTask={deleteTask} />
+            <Tasks tasks={tasks} toggleComplete={toggleComplete} deleteTask={deleteTask} deleteComTask={deleteComTask} />
           </div>
         </div>
-      </div>
+      
     </main>
   );
 }
