@@ -1,25 +1,9 @@
 "use client"
 import React, { useState, useEffect } from 'react'
+import { ThemeProps } from './Type'
 
-const Theme = () => {
-    const [theme, setTheme] = useState('light')
-
-    useEffect(() => {
-        const getTheme = localStorage.getItem('theme') || 'light'
-        document.documentElement.classList.add(getTheme)
-        setTheme(getTheme)
-
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light'
-        document.documentElement.classList.remove(theme)
-        document.documentElement.classList.add(newTheme)
-        localStorage.setItem('theme', newTheme)
-        setTheme(newTheme)
-    }
-
-
+const Theme = ({theme, toggleTheme}:ThemeProps) => {
+    
     return (
         <div className='flex justify-between w-full mb-4'>
             <h1 className='text-white text-3xl font-semibold'>TODO</h1>

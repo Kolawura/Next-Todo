@@ -20,3 +20,11 @@ export interface TaskProps {
 export interface TaskInputProps {
   addTask: (text: string) => void;
 }
+
+export interface ThemeProps {
+  theme: string;
+  toggleTheme: () => void;
+}
+export interface ImageProps {
+  theme: string
+}
